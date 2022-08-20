@@ -1,0 +1,14 @@
+<!--pages/wxml/index.wxml-->
+<text style="font-weight:bold;color:purple">本次签到信息</text>
+<textarea id="input" name="input" placeholder="请输入签到信息" placeholder-style="color:blue;" style="border:1px solid black;  padding: 10rpx;" />
+<text style="font-weight:bold;color:purple">原始名单列表</text>
+<textarea value="{{name_list}}" id="name_list" name="name_list" placeholder="ceshi" placeholder-style="color:blue;" style="border:1px solid black;  padding: 10rpx;">
+</textarea>
+<button bindtap="clickMe">检查签到</button>
+<text style="font-weight:bold;color:purple; ">本次未签到名单</text>
+<textarea id="output" placeholder="校验结果" style="border:1px solid black;  padding: 10rpx;" value="{{out_put}}" placeholder-style="color:blue;"  />
+
+
+
+
+
