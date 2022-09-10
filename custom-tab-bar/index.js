@@ -19,8 +19,8 @@ Component({
   },
   methods: {
     switchTab(e) {
-        console.log(e);
       const data = e.currentTarget.dataset
+      // console.log(data);
       const url = data.path
       wx.switchTab({url})
       this.setData({
