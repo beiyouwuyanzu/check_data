@@ -1,21 +1,25 @@
 <view class="intro">
 
   <form catchsubmit="formSubmit" catchreset="formReset">
-      <view class="page-section">
-        <view class="page-section-title">请输入学生姓名</view>
-        <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell weui-cell_input">
+      <!-- <view class="page-section"> -->
+        <!-- <view class="page-section-title">请输入学生姓名</view> -->
+        <!-- <view class="weui-cells weui-cells_after-title"> -->
+          <!-- <view class="weui-cell weui-cell_input"> -->
             <view class="weui-cell__bd" style="margin: 30rpx 0" >
-              <input class="weui-input" name="input" placeholder="这是一个输入框" />
+              <input class="weui-input" name="input" placeholder="输入学生姓名" />
             </view>
-          </view>
-        </view>
-      </view>
+          <!-- </view> -->
+        <!-- </view> -->
+      <!-- </view> -->
 
       <view class="btn-area">
         <button style="margin: 30rpx 0" type="primary" formType="submit">提交</button>
-        <button style="margin: 30rpx 0" formType="reset">重置</button>
+        <!-- <button style="margin: 30rpx 0" formType="reset">重置</button> -->
       </view>
     </form>
+
+    <view class="container">
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+    </view>
 
 </view>
