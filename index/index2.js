@@ -71,6 +71,15 @@ function setOption(chart, res) {
           data: [{
             value: values,
             name: name,
+            label: {
+                normal: {
+                    show: true,
+                    formatter:function(params) {
+                        return params.value;
+                    }
+                }
+            }
+
           }
         //   {
         //     value: [300, 430, 150, 300, 420, 250],
