@@ -3,43 +3,85 @@ import * as echarts from '../ec-canvas/echarts';
 const app = getApp();
 const htmlSnip =
 `<p>
-<div style="text-align:left;">
-    <strong>亲爱的{0}家长</strong>：
-</div>
-<div style="text-align:left;">
-    上图是孩子本周的行为规范记录，我们全班正在向着“最文明教室”努力，您的孩子也在用自己的力量为班级加油，为自己加油！
-</div>
-<div style="text-align:left;">
-    从本周的得分情况来看，孩子的<strong><span style="font-size:14px;color:#99BB00;"><u>{1}</u></span></strong>、<strong><span style="font-size:14px;color:#99BB00;"><u>{2}</u></span></strong>表现不错，请一定大大鼓励孩子哦~
-</div>
-<div style="text-align:left;">
-    另一方面，孩子在<strong><span style="font-size:14px;color:#E53333;"><u>{3}</u></span></strong>、<span style="font-size:14px;color:#E53333;"><strong><u>{4}</u></strong></span>还需继续努力，但是没<span style="color:#E53333;"></span>关系，跟孩子一起想想——我还可以做什么让自己更棒！
-</div>
-<div style="text-align:left;">
-    家庭自主规划也期待您和孩子每周整理和总结，云朵之家和您一起陪伴孩子的成长~
-</div>
-<div style="text-align:left;">
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 云朵之家
-</div>
-<p style="text-align:left;">
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<em>{5}</em>
+<br />
 </p>
 <p style="text-align:left;">
-    <em><br />
-</em>
+亲爱的<strong><span style="line-height:1.5;font-size:18px;">{0}</span></strong>家长：
 </p>
 <p style="text-align:left;">
-    <em><br />
-</em>
+<br />
 </p>
 <p style="text-align:left;">
-    <em><br />
-</em>
+&nbsp;上图是孩子本周的行为规范记录，我们全班正在向着“最文明教室”努力，您的孩子也在用自己的力量为班级加油，为自己加油！
 </p>
 <p style="text-align:left;">
-    <em><br />
-</em>
+<br />
 </p>
+<p style="text-align:left;">
+&nbsp;从本周的得分情况来看，孩子的<span style="color:#99BB00;font-size:18px;"><strong><u>{1}</u></strong></span>、<span style="color:#99BB00;font-size:18px;"><strong><u>{2}</u></strong></span>表现不错，请一定大大鼓励孩子哦~
+</p>
+<p style="text-align:left;">
+<br />
+</p>
+<p style="text-align:left;">
+另一方面，孩子在<span style="font-size:18px;color:#FF9900;"><strong><u>{3}</u></strong></span>、<span style="color:#FF9900;font-size:18px;"><strong><u>{4}</u></strong></span>还需继续努力，但是没关系，跟孩子一起想想——我还可以做什么让自己更棒！
+</p>
+<p style="text-align:left;">
+<br />
+</p>
+<p style="text-align:left;">
+云朵之家绝不做纵向对比，但是支持孩子们进行自我归纳总结。
+</p>
+<p style="text-align:left;">
+<br />
+</p>
+<p style="text-align:left;">
+孩子们之间也没有任何可比性，有内敛的，有活泼的，不同的性格一定在班级表现中有不同的体现。因为孩子的不同，才有云朵之家的精彩，请您也接纳孩子的不同侧面，我们一起悦纳孩子~
+</p>
+<p style="text-align:left;">
+<br />
+</p>
+<p style="text-align:left;">
+&nbsp;同时，孩子一周鲜活的生活也不是这冷冰冰的数字可以概括的，提供这样一份图表是希望您能更多维度的关注孩子的成长。很多时候，成绩只是个结果，而比起结果更重要的是，对孩子来说，班级生活中这些“细小而重要”的方面是否可以做好，这些方面往往是现阶段孩子在班级里“胜任感”“自信心”的来源。
+</p>
+<p style="text-align:left;">
+<br />
+</p>
+<p style="text-align:left;">
+家庭自主规划也期待您和孩子每周整理和总结，云朵之家和您一起陪伴孩子的成长~
+</p>
+<p style="text-align:left;">
+<br />
+</p>
+<div style="text-align:left;">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;云朵之家
+</div>
+<div style="text-align:left;">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:14px;"><strong><em>{5}</em></strong></span> 
+</div>
+<p>
+<br />
+</p>
+<p style="text-align:left;">
+<br />
+</p>
+<p style="text-align:left;">
+<br />
+</p>
+<p style="text-align:left;">
+<br />
+</p>
+<p style="text-align:left;">
+<br />
+</p>
+<p style="text-align:left;">
+<br />
+</p>
+<p style="text-align:left;">
+<br />
+</p>
+<p style="text-align:left;">
+<br />
 </p>
 `
 function setOption(chart, res) {
@@ -181,7 +223,7 @@ Component({
           });
           return;
       }
-      wx.request({url: "https://req.wangyaqi.site:8080/get_polygon/" + name, methods: 'get', success (res) {
+      wx.request({url: "https://req.wangyaqi.site:8080/get_polygon/" + name, methods: 'get', timeout: 500, success (res) {
         console.log(res.data);
         if(res.data == "not found"){
             wx.showToast({
@@ -269,6 +311,12 @@ Component({
           let text = htmlSnip.format(name, good1, good2, bad1, bad2, date);
           that.setData({htmlSnip: text});
 
+        }, fail(res){
+            wx.showToast({
+                title: '数据库未响应, 请稍后重试',
+                icon: 'none',
+                duration : 2000,
+              });
         }})
 
         }
